@@ -19,6 +19,4 @@ else
     echo "ALLOWED_HOSTS=localhost,127.0.0.1" >> .env
 fi
 
-uv sync --all-groups
-
 echo "SECRET_KEY가 .env 파일에 저장되었습니다."
