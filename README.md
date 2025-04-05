@@ -42,6 +42,16 @@ nano .env
 ```
 
 ### 5. wsgi.py 수정
+- 현재 경로 복사해서 wsgi.py 파일 project_home에 붙여넣기
+```bash
+pwd
+```
+![alt text](images/markdown-image-1.png)
+
+![alt text](images/markdown-image-2.png)
+
+![alt text](images/markdown-image-3.png)
+
 ```python
 # This file contains the WSGI configuration required to serve up your
 # web application at http://grater.pythonanywhere.com/
@@ -67,12 +77,22 @@ from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 ```
 
+### 6. Source code , Working directory 수정하기
+- Source code : 5. 에서 복사한 현재경로
+- Working directory : 5. 에서 복사한 현재경로에서 최하위 경로 삭제 
+![alt text](images/markdown-image-4.png)
+
+### 7. 파이썬 버전, 가상환경 경로 설정
+![alt text](images/markdown-image-5.png)
+
+### 8. 적용하기 
+![alt text](images/markdown-image-6.png)
+
+![alt text](images/markdown-image-7.png)
 
 
 
-
-
-# 로컬 환경설정정
+# 로컬 환경설정
 
 ### 서버 실행
 ```bash
@@ -91,5 +111,14 @@ uv run pytest
 ```
 
 # pythonanywhere 환경설정
+
+### 파일가져오기
+```bash
+git pull
+uv sync
+```
+
+### 적용하기
+웹 > 리로드클릭
 
 
