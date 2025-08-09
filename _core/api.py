@@ -3,7 +3,6 @@ from ninja import NinjaAPI
 from apis._router.health_router import health_router
 from apis._router.triple_luck import triple_luck_router
 
-
 api = NinjaAPI(
     title="pythonanywhere API",
     description="API for pythonanywhere",

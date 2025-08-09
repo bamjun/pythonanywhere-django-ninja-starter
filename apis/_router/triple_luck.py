@@ -1,7 +1,7 @@
 from typing import Any
 
-from ninja import Router
 import requests
+from ninja import Router
 
 triple_luck_router = Router()
 
@@ -24,9 +24,5 @@ def get_triple_luck_page(request: Any) -> dict[str, str]:
     resp = requests.get(url, timeout=10)
     resp.encoding = "euc-kr"  # EUC-KR 인코딩 지정
     if resp.status_code != 200:
-        return {
-            "error": "Failed to fetch the page"
-        }
-    return {
-        "html": resp.text
-        }
+        return {"error": "Failed to fetch the page"}
+    return {"html": resp.text}
