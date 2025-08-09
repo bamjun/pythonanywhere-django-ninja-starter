@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Check if uv is installed
+if command -v uv &>/dev/null; then
+    echo "uv installed"
+else
+    echo "uv not installed"
+    exit 1
+fi
+
+
 # Django SECRET_KEY 생성
 SECRET_KEY=$(uv run python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())")
 
